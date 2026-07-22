@@ -166,6 +166,14 @@ nav {
 .pillar-list { list-style: none; font-size: 14px; color: var(--muted); }
 .pillar-list li { margin-bottom: 8px; padding-left: 15px; position: relative; }
 .pillar-list li::before { content: '→'; position: absolute; left: 0; color: var(--yellow); }
+#linkedin { padding: 80px var(--pad); background: var(--asphalt-light); }
+.linkedin-inner { max-width: var(--max-w); margin: 0 auto; }
+.linkedin-grid { display: grid; grid-template-columns: minmax(0, 504px) 1fr; gap: 80px; align-items: start; }
+.linkedin-frame-wrap { border: 1px solid var(--steel); background: var(--grid); }
+.linkedin-frame-wrap iframe { display: block; width: 100%; height: 640px; border: 0; }
+.linkedin-fallback { border: 1px solid var(--steel); background: var(--grid); padding: 32px; }
+.linkedin-fallback p { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+.linkedin-note { font-size: 14px; color: var(--muted); margin: 12px 0 28px; max-width: 420px; }
 #contact { padding: 80px var(--pad); }
 .contact-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
 .form { display: flex; flex-direction: column; gap: 15px; }
@@ -193,6 +201,8 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
 }
 @media (max-width: 800px) {
   .hero-inner, .positioning-grid, .contact-inner { grid-template-columns: 1fr; }
+  .linkedin-grid { grid-template-columns: 1fr; gap: 40px; }
+  .linkedin-frame-wrap iframe { height: 560px; }
   .hero-visual { display: none; }
   .nav-toggle { display: block; }
   .nav-links {
@@ -213,6 +223,7 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
     <div class="nav-links" id="navLinks">
       <a href="#pillars">Pilíře</a>
       <a href="#positioning">O mně</a>
+      <a href="#linkedin">LinkedIn</a>
       <a href="#contact">Kontakt</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Otevřít menu">MENU</button>
@@ -313,6 +324,28 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
     </div>
   </div>
 </section>
+<section id="linkedin">
+  <div class="linkedin-inner">
+    <div class="section-header">
+      <div class="section-tag">// LinkedIn</div>
+      <h2 class="section-h2">Poslední příspěvek</h2>
+    </div>
+    <div class="linkedin-grid">
+      <div>
+        <div class="linkedin-frame-wrap" id="liFrameWrap" hidden></div>
+        <div class="linkedin-fallback" id="liFallback" hidden>
+          <p>Aktuální příspěvky a poznámky z praxe najdete na firemním profilu SCM Signpost.</p>
+          <a class="btn-primary" href="https://www.linkedin.com/company/sc-signpost" target="_blank" rel="noopener">Otevřít LinkedIn →</a>
+        </div>
+      </div>
+      <div class="linkedin-side">
+        <div class="pos-value-title">Poznámky z terénu</div>
+        <p class="linkedin-note">Tendry, sklady, implementace — co reálně funguje a co ne. Bez marketingové vaty.</p>
+        <a class="btn-outline" href="https://www.linkedin.com/company/sc-signpost" target="_blank" rel="noopener">Sledovat SCM Signpost</a>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="contact">
   <div class="contact-inner">
     <div>
@@ -341,6 +374,35 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
   <p class="footer-note">© 2026 SCM Signpost. Navigating the Supplychain Reality.</p>
 </footer>
 <script>
+/* === LinkedIn — poslední příspěvek =========================================
+   Jak aktualizovat po publikaci nového příspěvku (cca 30 sekund):
+   1) Na LinkedIn u příspěvku klikněte na ⋯ (tři tečky) → „Vložit tento
+      příspěvek" / "Embed this post". Funguje jen u veřejných příspěvků.
+   2) Z nabídnutého kódu zkopírujte pouze adresu z atributu src — vypadá takto:
+      https://www.linkedin.com/embed/feed/update/urn:li:share:1234567890
+      (může být i urn:li:ugcPost:… nebo urn:li:activity:…)
+   3) Vložte ji níže mezi uvozovky, commit + push na main. GitHub Action
+      nasadí web a sekce zobrazí nový příspěvek.
+   Prázdný řetězec ("") = místo příspěvku se zobrazí odkaz na firemní profil,
+   sekce tedy nikdy není rozbitá. ========================================== */
+var LINKEDIN_EMBED_URL = "";
+
+(function () {
+  var wrap = document.getElementById('liFrameWrap');
+  var fallback = document.getElementById('liFallback');
+  if (LINKEDIN_EMBED_URL) {
+    var f = document.createElement('iframe');
+    f.src = LINKEDIN_EMBED_URL;
+    f.loading = 'lazy';
+    f.title = 'Poslední příspěvek SCM Signpost na LinkedIn';
+    f.setAttribute('allowfullscreen', '');
+    wrap.appendChild(f);
+    wrap.hidden = false;
+  } else {
+    fallback.hidden = false;
+  }
+})();
+
 if (new URLSearchParams(location.search).get('sent') === '1') {
   var ok = document.getElementById('formSuccess');
   ok.hidden = false;
