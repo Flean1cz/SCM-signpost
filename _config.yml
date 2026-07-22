@@ -1,1 +1,9 @@
+# SCM Signpost — GitHub Pages build config
+# Files listed here stay in the repo but are NOT published to the live site.
 
+exclude:
+  - "SCM Signpost Design System-handoff.zip"
+  - "SCM Signpost Brand Identity.pdf"
+  - "background_scm_signpost.png"
+  - "logo_scm_signpost.png"
+  - "README.md"
