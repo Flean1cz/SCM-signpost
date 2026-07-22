@@ -60,7 +60,7 @@ body {
   --grid:          #2C2F33;
   --yellow:        #FFD700;
   --white:         #FFFFFF;
-  --muted:         #7A7F86;
+  --muted:         #9298A0;
   --max-w:         1140px;
   --pad:           clamp(24px, 5vw, 80px);
 }
@@ -124,7 +124,7 @@ nav {
   line-height: 1.0; letter-spacing: -0.03em; color: var(--white);
   margin-bottom: 28px;
 }
-.hero-h1 .accent { color: var(--yellow); }
+.accent { color: var(--yellow); }
 .hero-sub {
   font-family: 'Inter', sans-serif; font-size: clamp(15px, 1.5vw, 18px);
   font-weight: 400; color: var(--muted); line-height: 1.6; max-width: 480px;
@@ -172,6 +172,19 @@ nav {
 .form-input, .form-textarea { background: var(--grid); border: 1px solid var(--steel); color: white; padding: 12px; outline: none; width: 100%; }
 .form-submit { background: var(--yellow); color: var(--asphalt); border: none; padding: 15px; font-weight: 700; cursor: pointer; text-transform: uppercase; }
 .form-success { border: 1px solid var(--yellow); background: rgba(255,215,0,0.10); color: var(--yellow); padding: 12px 16px; font-family: 'Roboto Mono', monospace; font-size: 13px; }
+#pillars .section-header, #pillars .pillars-grid { max-width: var(--max-w); margin-left: auto; margin-right: auto; }
+#pillars .section-header { margin-bottom: 64px; padding-right: 20px; }
+.pos-note { font-size: 14px; color: var(--muted); }
+.contact-h2 { font-size: clamp(34px, 4.5vw, 48px); font-weight: 900; line-height: 1; }
+.contact-sub { color: var(--muted); margin: 20px 0; }
+.contact-email { font-family: 'Roboto Mono', monospace; font-size: 14px; color: var(--yellow); }
+.footer-note { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--muted); }
+.nav-cta:hover, .btn-primary:hover, .form-submit:hover { opacity: 0.85; }
+.btn-outline:hover { border-color: var(--yellow); }
+.form-input:focus, .form-textarea:focus { border-color: var(--yellow); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+.form-submit { transition: opacity 0.15s; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid var(--grid); text-align: center; }
 .nav-toggle {
   display: none; background: transparent; border: 1px solid var(--steel);
@@ -243,21 +256,21 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
     <div class="pos-values">
       <div class="pos-value">
         <div class="pos-value-title">Analytika</div>
-        <p style="font-size: 14px; color: var(--muted)">Unit cost musí odpovídat profilu obrátky.</p>
+        <p class="pos-note">Unit cost musí odpovídat profilu obrátky.</p>
       </div>
       <div class="pos-value">
         <div class="pos-value-title">Přímost</div>
-        <p style="font-size: 14px; color: var(--muted)">Pokud je zadání tendru špatné, rovnou to řeknu.</p>
+        <p class="pos-note">Pokud je zadání tendru špatné, rovnou to řeknu.</p>
       </div>
     </div>
   </div>
 </section>
 <section id="pillars">
-  <div class="section-header" style="max-width: var(--max-w); margin: 0 auto 64px auto; padding: 0 20px;">
+  <div class="section-header">
     <div class="section-tag">// Expertíza</div>
     <h2 class="section-h2">Pět pilířů efektivity</h2>
   </div>
-  <div class="pillars-grid" style="max-width: var(--max-w); margin: 0 auto;">
+  <div class="pillars-grid">
     <div class="pillar-card">
       <div class="pillar-title">01 — 3PL Tendry</div>
       <ul class="pillar-list">
@@ -303,9 +316,9 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
 <section id="contact">
   <div class="contact-inner">
     <div>
-      <h2 style="font-size: 48px; font-weight: 900; line-height: 1;">Zastavme <span style="color:var(--yellow)">ztráty.</span></h2>
-      <p style="color: var(--muted); margin: 20px 0;">Máte pochybnosti o nastavení logistiky? Pojďme se podívat na fakta.</p>
-      <p style="font-family: 'Roboto Mono'; font-size: 14px; color: var(--yellow);">info@scmsignpost.com</p>
+      <h2 class="contact-h2">Zastavme <span class="accent">ztráty.</span></h2>
+      <p class="contact-sub">Máte pochybnosti o nastavení logistiky? Pojďme se podívat na fakta.</p>
+      <p class="contact-email">info@scmsignpost.com</p>
     </div>
     <form class="form" id="contactForm" action="https://formsubmit.co/info@scmsignpost.com" method="POST">
       <div id="formSuccess" class="form-success" hidden>→ Poptávka odeslána. Ozvu se co nejdříve.</div>
@@ -314,15 +327,18 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://flean1cz.github.io/SCM-signpost/?sent=1">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <input type="text" name="name" class="form-input" placeholder="Jméno" required>
-      <input type="email" name="email" class="form-input" placeholder="E-mail" required>
-      <textarea name="message" class="form-textarea" rows="4" placeholder="Vaše situace..." required></textarea>
+      <label class="sr-only" for="f-name">Jméno</label>
+      <input type="text" name="name" id="f-name" class="form-input" placeholder="Jméno" required>
+      <label class="sr-only" for="f-email">E-mail</label>
+      <input type="email" name="email" id="f-email" class="form-input" placeholder="E-mail" required>
+      <label class="sr-only" for="f-msg">Vaše situace</label>
+      <textarea name="message" id="f-msg" class="form-textarea" rows="4" placeholder="Vaše situace..." required></textarea>
       <button type="submit" class="form-submit">Odeslat poptávku →</button>
     </form>
   </div>
 </section>
 <footer>
-  <p style="font-family: 'Roboto Mono'; font-size: 12px; color: var(--muted);">© 2026 SCM Signpost. Navigating the Industrial Reality.</p>
+  <p class="footer-note">© 2026 SCM Signpost. Navigating the Industrial Reality.</p>
 </footer>
 <script>
 if (new URLSearchParams(location.search).get('sent') === '1') {
