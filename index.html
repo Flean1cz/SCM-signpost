@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SCM Signpost — Průvodci Supplychain realitou</title>
+<title>SCM Signpost — Průvodce supply chain realitou</title>
 <meta name="description" content="Odborný filtr mezi nákupem a skladem. Audit 3PL tendrů, skladová efektivita, transport a implementace WMS/TMS — funkční řešení založená na datech.">
 <meta name="theme-color" content="#262626">
 <link rel="canonical" href="https://flean1cz.github.io/SCM-signpost/">
@@ -13,14 +13,14 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:site_name" content="SCM Signpost">
-<meta property="og:title" content="SCM Signpost — Logistické sliby v praxi">
+<meta property="og:title" content="SCM Signpost — Navigace supply chain realitou">
 <meta property="og:description" content="Odborný filtr mezi nákupem a skladem. Audit 3PL tendrů, skladová efektivita, transport a implementace WMS/TMS — funkční řešení založená na datech.">
 <meta property="og:url" content="https://flean1cz.github.io/SCM-signpost/">
 <meta property="og:image" content="https://flean1cz.github.io/SCM-signpost/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SCM Signpost — Logistické sliby v praxi">
+<meta name="twitter:title" content="SCM Signpost — Navigace supply chain realitou">
 <meta name="twitter:description" content="Odborný filtr mezi nákupem a skladem. Audit 3PL tendrů, skladová efektivita, transport a implementace WMS/TMS — funkční řešení založená na datech.">
 <meta name="twitter:image" content="https://flean1cz.github.io/SCM-signpost/assets/og-image.jpg">
 <link rel="preload" href="assets/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
@@ -157,6 +157,7 @@ nav {
 #positioning { padding: 80px var(--pad); background: var(--asphalt-light); }
 .positioning-grid { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
 .pos-body { font-size: 18px; color: var(--muted); }
+.pos-body + .pos-body { margin-top: 20px; font-size: 16px; }
 .pos-values { display: flex; flex-direction: column; gap: 20px; }
 .pos-value-title { font-family: 'Roboto Mono', monospace; color: var(--yellow); font-size: 13px; text-transform: uppercase; }
 #pillars { padding: 80px var(--pad); }
@@ -183,6 +184,9 @@ nav {
 #pillars .section-header, #pillars .pillars-grid { max-width: var(--max-w); margin-left: auto; margin-right: auto; }
 #pillars .section-header { margin-bottom: 64px; padding-right: 20px; }
 .pos-note { font-size: 14px; color: var(--muted); }
+.creds { margin-top: 12px; padding-top: 24px; border-top: 1px solid var(--steel); display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; align-items: baseline; }
+.creds dt { font-family: 'Roboto Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--yellow); }
+.creds dd { font-family: 'Roboto Mono', monospace; font-size: 13px; color: var(--muted); line-height: 1.5; }
 .contact-h2 { font-size: clamp(34px, 4.5vw, 48px); font-weight: 900; line-height: 1; }
 .contact-sub { color: var(--muted); margin: 20px 0; }
 .contact-email { font-family: 'Roboto Mono', monospace; font-size: 14px; color: var(--yellow); }
@@ -201,6 +205,8 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
 }
 @media (max-width: 800px) {
   .hero-inner, .positioning-grid, .contact-inner { grid-template-columns: 1fr; }
+  .creds { grid-template-columns: 1fr; gap: 4px; }
+  .creds dd { margin-bottom: 12px; }
   .linkedin-grid { grid-template-columns: 1fr; gap: 40px; }
   .linkedin-frame-wrap iframe { height: 560px; }
   .hero-visual { display: none; }
@@ -235,7 +241,7 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
   <div class="hero-inner">
     <div>
       <div class="hero-label">// Supply Chain Intelligence</div>
-      <h1 class="hero-h1">Logistické sliby v <span class="accent">praxi.</span></h1>
+      <h1 class="hero-h1">Navigace supply chain <span class="accent">realitou.</span></h1>
       <p class="hero-sub">Jsem odborný filtr mezi nákupem a skladem. Žádná vata, jen funkční řešení založená na datech.</p>
       <div class="btn-row">
         <a href="#pillars" class="btn-primary">Expertíza</a>
@@ -260,9 +266,11 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
     <div>
       <div class="section-header">
         <div class="section-tag">// Kdo jsem</div>
-        <h2 class="section-h2">Průvodci industriální realitou.</h2>
+        <h2 class="section-h2">Jakub Blažek</h2>
       </div>
-      <p class="pos-body">Eliminuji propast mezi tím, co slibuje obchod, a tím, co lze reálně odoperovat. Rozumím kódům na paletách i tabulkám pro board.</p>
+      <p class="pos-body">Třináct let v logistice a supply chainu. Obalový expert, advanced logistics, global freight manager v automotive, logistický projektový manažer, obchodní zástupce na straně 3PL a 4PL poskytovatelů.</p>
+      <p class="pos-body">Tenhle rozptyl je záměr, ne náhoda. Seděl jsem na obou stranách stolu — psal nabídky i je vyhodnocoval. Vím, kde se v pricingovém modelu schovává riziko, protože jsem takové modely sám stavěl.</p>
+      <p class="pos-body">Od roku 2025 pracuji pod značkou SCM Signpost. Sám a záměrně: na váš provoz se dívám osobně, od rampy po reporting. Tendry a jednání vedu česky i anglicky. Eliminuji propast mezi tím, co slibuje obchod, a tím, co lze reálně odoperovat. Rozumím kódům na paletách i tabulkám pro board.</p>
     </div>
     <div class="pos-values">
       <div class="pos-value">
@@ -271,8 +279,22 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
       </div>
       <div class="pos-value">
         <div class="pos-value-title">Přímost</div>
-        <p class="pos-note">Pokud je zadání tendru špatné, rovnou to řeknu.</p>
+        <p class="pos-note">Pokud je zadání tendru špatné, rovnou to řeknu. I když to není to, co chcete slyšet.</p>
       </div>
+      <div class="pos-value">
+        <div class="pos-value-title">Obě strany stolu</div>
+        <p class="pos-note">Znám argumentaci 3PL zevnitř. Poznám, kdy je reálná a kdy jen dobře napsaná.</p>
+      </div>
+      <dl class="creds">
+        <dt>Vzdělání</dt>
+        <dd>Dopravní fakulta Jana Pernera, Univerzita Pardubice</dd>
+        <dt>Certifikace</dt>
+        <dd>PRINCE2 Agile — projektové řízení</dd>
+        <dt>Systémy</dt>
+        <dd>SAP · SAP EWM · Mibcon · TRIS</dd>
+        <dt>Jazyky</dt>
+        <dd>Čeština · Angličtina</dd>
+      </dl>
     </div>
   </div>
 </section>
@@ -371,7 +393,7 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
   </div>
 </section>
 <footer>
-  <p class="footer-note">© 2026 SCM Signpost. Navigating the Supplychain Reality.</p>
+  <p class="footer-note">© 2026 SCM Signpost. Navigating the Supply Chain Reality.</p>
 </footer>
 <script>
 /* === LinkedIn — poslední příspěvek =========================================
