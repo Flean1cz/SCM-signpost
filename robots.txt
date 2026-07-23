@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flean1cz.github.io/SCM-signpost/sitemap.xml

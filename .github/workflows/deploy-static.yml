@@ -32,8 +32,13 @@ jobs:
       - name: Assemble site (allowlist — only these files are published)
         run: |
           mkdir -p _site
-          cp index.html _site/
+          for f in *.html; do
+            [ "$f" = "_template.html" ] && continue
+            cp "$f" _site/
+          done
           cp -r assets _site/assets
+          cp sitemap.xml _site/
+          cp robots.txt _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
