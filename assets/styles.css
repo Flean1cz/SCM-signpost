@@ -194,3 +194,11 @@ footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid va
 }
 /* Pillar cards on index.html are anchors linking to their pillar subpage; reset default link styling to preserve original card appearance. */
 a.pillar-card { display: block; color: inherit; text-decoration: none; }
+/* Pillar subpage long-form content: width container + heading levels + quote block, reusing existing tokens. */
+.pillar-article { max-width: var(--max-w); margin: 0 auto; }
+.pillar-h2 { font-family: 'Inter', sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); color: var(--white); margin: 56px 0 24px; }
+.pillar-h3 { font-family: 'Roboto Mono', monospace; font-weight: 600; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--yellow); margin: 32px 0 12px; }
+.pillar-quote { border-left: 3px solid var(--yellow); background: rgba(255,215,0,0.06); padding: 24px 28px; margin: 32px 0; }
+.pillar-quote p { color: var(--white); }
+.pillar-quote p + p { margin-top: 12px; }
+.pillar-cta { margin: 40px 0; }
