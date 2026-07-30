@@ -202,3 +202,6 @@ a.pillar-card { display: block; color: inherit; text-decoration: none; }
 .pillar-quote p { color: var(--white); }
 .pillar-quote p + p { margin-top: 12px; }
 .pillar-cta { margin: 40px 0; }
+.pillar-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 28px 32px; margin: 32px 0 40px; padding: 24px 0; border-top: 1px solid var(--grid); border-bottom: 1px solid var(--grid); }
+.pillar-stats .stat-val { display: block; margin-bottom: 6px; }
+.pillar-stats .stat-desc { line-height: 1.4; }
