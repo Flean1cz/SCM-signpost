@@ -3,10 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Transport — SCM Signpost</title>
-<meta name="description" content="Transport — připravujeme.">
+<title>Transport a logistika přepravy | SCM Signpost</title>
+<meta name="description" content="Audit přepravních nákladů: palivové doložky, skryté příplatky, volumetrická váha a volba přepravního módu (FTL/LTL/letecká/námořní).">
 <meta name="theme-color" content="#262626">
-<meta name="robots" content="noindex">
 <link rel="canonical" href="https://flean1cz.github.io/SCM-signpost/pilir-transport.html">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
@@ -14,15 +13,15 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:site_name" content="SCM Signpost">
-<meta property="og:title" content="Transport — SCM Signpost">
-<meta property="og:description" content="Transport — připravujeme.">
+<meta property="og:title" content="Transport a logistika přepravy | SCM Signpost">
+<meta property="og:description" content="Audit přepravních nákladů: palivové doložky, skryté příplatky, volumetrická váha a volba přepravního módu (FTL/LTL/letecká/námořní).">
 <meta property="og:url" content="https://flean1cz.github.io/SCM-signpost/pilir-transport.html">
 <meta property="og:image" content="https://flean1cz.github.io/SCM-signpost/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Transport — SCM Signpost">
-<meta name="twitter:description" content="Transport — připravujeme.">
+<meta name="twitter:title" content="Transport a logistika přepravy | SCM Signpost">
+<meta name="twitter:description" content="Audit přepravních nákladů: palivové doložky, skryté příplatky, volumetrická váha a volba přepravního módu (FTL/LTL/letecká/námořní).">
 <meta name="twitter:image" content="https://flean1cz.github.io/SCM-signpost/assets/og-image.jpg">
 <link rel="preload" href="assets/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/RobotoMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
@@ -49,11 +48,109 @@
 </nav>
 <main style="padding: 80px var(--pad);">
 <!-- OBSAH -->
-<div class="section-header">
-  <div class="section-tag">// Expertíza</div>
-  <h1 class="section-h2">03 — Transport</h1>
+<div class="pillar-article">
+  <div class="section-header">
+    <div class="section-tag">// Expertíza</div>
+    <h1 class="section-h2">Transport: kdo vyjednává jen cenu za kilometr, nevyjednal nic</h1>
+  </div>
+
+  <p class="pos-body">Doprava se dá vyjednat na skvělou sazbu za kilometr nebo paletové místo a firma přesto rok co rok platí víc, než by měla.</p>
+  <p class="pos-body">Důvod je vždy stejný: sazba je jen jedna položka z celkových nákladů na vlastnictví celého přepravního řetězce.</p>
+
+  <h2 class="pillar-h2">Tři nejčastější chyby v transportní logistice</h2>
+
+  <h3 class="pillar-h3">1. Slepota vůči palivovým doložkám a skrytým příplatkům</h3>
+  <p class="pos-body">Firma vyjedná výhodnou základní sazbu za kilometr nebo paletové místo, ale zcela opomene mechanismus výpočtu palivového příplatku (fuel surcharge).</p>
+  <p class="pos-body">Dopravci často navazují příplatky na netransparentní interní indexy, které při růstu cen nafty okamžitě stoupají, ale při poklesu se vrací zpět jen velmi pomalu.</p>
+
+  <h3 class="pillar-h3">2. Absence konsolidace a ignorování volumetrické hmotnosti</h3>
+  <p class="pos-body">Zásilky se odesílají reaktivně, tak jak přijdou pod ruku, bez shlukování podle zón nebo časových oken.</p>
+  <p class="pos-body">Zároveň se balí do předimenzovaných krabic s velkým množstvím výplňového materiálu — firma tak reálně platí za přepravu vzduchu.</p>
+
+  <h3 class="pillar-h3">3. Neřízená vratná logistika a špatná volba přepravního módu</h3>
+  <p class="pos-body">Vratky jsou vnímané jako nutné zlo a řeší se ad hoc, neefektivními expresními svozy.</p>
+  <p class="pos-body">Zároveň chybí strategické rozhodování, kdy využít FTL, LTL, sběrnou službu nebo námořní a leteckou přepravu ve vazbě na hodnotu vázaného kapitálu.</p>
+
+  <h2 class="pillar-h2">Jak přesně na dopravě firma prodělává</h2>
+
+  <h3 class="pillar-h3">1. Placení za „vzduch" v balení (volumetrická váha)</h3>
+  <p class="pos-body">Přepravci, zejména balíkoví a expresní, účtují přepravné podle toho, která hodnota je vyšší — zda skutečná hmotnost, nebo volumetrická hmotnost vypočtená podle vzorce:</p>
+  <p class="pos-body" style="font-family: 'Roboto Mono', monospace; font-size: 15px;">W<sub>dim</sub> = (L × W × H) / f<sub>dim</sub></p>
+  <p class="pos-body">Kde L, W, H jsou rozměry zásilky v cm a f<sub>dim</sub> je volumetrický koeficient, standardně 5 000 cm³/kg.</p>
+  <p class="pos-body">Pokud odesíláte lehký produkt ve zbytečně velké krabici, zaplatíte za vyměřenou volumetrickou váhu, i když reálná krabice váží pár gramů. Pro CFO to znamená přímý únik marže v řádu desítek procent.</p>
+
+  <h3 class="pillar-h3">2. Skryté zónové a přístupové poplatky</h3>
+  <p class="pos-body">Příplatky za doručení do rezidenčních zón, mýtné přirážky, poplatky za nadváhu nebo nadrozměr, penalizace za zdržení řidiče na nakládce kvůli špatné připravenosti skladu.</p>
+  <p class="pos-body">Tyto položky dokážou nafouknout finální fakturu o 15–25 % nad smluvní ceník.</p>
+
+  <h3 class="pillar-h3">3. Neřízené náklady na nečinný kapitál</h3>
+  <p class="pos-body">Zboží na cestě představuje vázaný kapitál. Pokud firma neplánuje toky a kvůli špatnému nastavení procesů posílá urgentní zásilky drahou leteckou přepravou, platí neúměrný prémiový příplatek za vlastní provozní neschopnost.</p>
+
+  <h2 class="pillar-h2">Příklad z praxe</h2>
+  <p class="pos-body">Středně velká výrobní společnost s mezinárodní distribucí dlouhodobě překračovala rozpočet na dopravu o 22 %.</p>
+  <p class="pos-body">Důvodem byla absence konsolidace sběrných služeb, špatně nastavené palivové indexy u tří hlavních dopravců a neustálé využívání urgentních leteckých přeprav komponentů z Asie kvůli špatně nastavenému bodu znovuobjednání (reorder pointu) ve skladu.</p>
+  <p class="pos-body">Provedli jsme audit smluv a palivových doložek s přenastavením výpočtu na nezávislý veřejný index, trade-off analýzu celkových nákladů (TCO) pro poměr letecká vs. námořní přeprava vs. sklad blízko trhu a standardizaci balení do tří velikostí kartonů.</p>
+  <p class="pos-body">Namísto drahých leteckých přeprav na poslední chvíli se zřídil konsignační příruční sklad blízko klíčového trhu, což umožnilo přechod na levnější námořní a železniční přepravu v plných kontejnerech.</p>
+  <p class="pos-body">Dosažené výsledky:</p>
+  <div class="pillar-stats">
+    <div class="pillar-stat">
+      <div class="stat-val">18 %</div>
+      <div class="stat-desc">odhalených a nárokovaných neoprávněně účtovaných příplatků u přepravců</div>
+    </div>
+    <div class="pillar-stat">
+      <div class="stat-val">−62 %</div>
+      <div class="stat-desc">snížení nákladů na expresní leteckou přepravu díky regionálnímu buffer skladu</div>
+    </div>
+    <div class="pillar-stat">
+      <div class="stat-val">−24 %</div>
+      <div class="stat-desc">snížení účtované volumetrické hmotnosti u balíkových zásilek</div>
+    </div>
+    <div class="pillar-stat">
+      <div class="stat-val">−15 %</div>
+      <div class="stat-desc">snížení počtu jízd díky lepší konsolidaci a vytížení vozidel</div>
+    </div>
+  </div>
+  <p class="pos-body">Nešlo o vyjednání nižší sazby za kilometr. Šlo o to, aby celkový model dopravy odpovídal skutečnému toku zboží.</p>
+
+  <h2 class="pillar-h2">Co říkám klientovi, který vyjednává jen sazbu za kilometr</h2>
+  <blockquote class="pillar-quote">
+    <p>„Kdo vyjednává jen cenu za kilometr nebo za paletové místo, ten v dopravě nevyjednal vůbec nic. Doprava není o sazbě za km, ale o celkových nákladech na vlastnictví (TCO) celého přepravního řetězce.</p>
+    <p>Pokud dostanete slevu 5 % na kilometrovém jízdném, ale dopravce vám to vrátí na palivovém příplatku, mýtném, zónových poplatcích a poplatcích za zdržení na rampě, pouze jste podepsali dražší fakturu v líbivém obalu."</p>
+  </blockquote>
+
+  <h2 class="pillar-h2">Pro koho je služba určena</h2>
+  <p class="pos-body">Pomáhám zejména:</p>
+  <ul class="pillar-list">
+    <li>ředitelům nákupu (CPO) a ředitelům logistiky</li>
+    <li>finančním ředitelům (CFO)</li>
+    <li>majitelům firem s ročními náklady na dopravu v řádu desítek milionů korun</li>
+    <li>firmám z výroby, FMCG, automotive, e-commerce a distribuce</li>
+  </ul>
+  <p class="pos-body">Typicky mě klient kontaktuje ve chvíli, kdy:</p>
+  <ul class="pillar-list">
+    <li>faktura za dopravu roste rychleji než počet prodaných kusů nebo přepravených tun</li>
+    <li>expanduje na nové trhy nebo mění distribuční model a potřebuje rozhodnout mezi centrální expedicí a lokálními depy</li>
+    <li>řeší krizi ve vratné logistice, kde vysoké procento vratek ukrajuje z marže</li>
+    <li>obnovuje smlouvy s dopravci a potřebuje nezávislý audit stávajících kontraktů</li>
+    <li>připravuje poptávkovou dokumentaci (RFP) bez skrytých chyb a s férovými palivovými doložkami</li>
+  </ul>
+
+  <h2 class="pillar-h2">Nechte si prověřit dopravu dřív, než vám ji rozdrobí příplatky</h2>
+  <p class="pos-body">Na úvodním diagnostickém hovoru společně projdeme:</p>
+  <ul class="pillar-list">
+    <li>aktuální smlouvy a mechanismus palivových doložek</li>
+    <li>skladbu zónových a přístupových poplatků na fakturách</li>
+    <li>způsob balení a využití volumetrické váhy</li>
+    <li>volbu přepravního módu ve vazbě na vázaný kapitál</li>
+  </ul>
+
+  <div class="pillar-cta">
+    <a class="btn-primary" href="index.html#contact">Domluvit diagnostický hovor</a>
+  </div>
+
+  <p class="pos-body">Neprodávám vám dopravce.</p>
+  <p class="pos-body">Pomáhám vám ověřit, kolik vás doprava skutečně stojí — a kde končí sazba a začínají skryté náklady.</p>
 </div>
-<p class="pos-body">Připravujeme.</p>
 </main>
 <footer>
   <p class="footer-note">© 2026 SCM Signpost. Navigating the Supply Chain Reality.</p>
