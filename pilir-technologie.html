@@ -3,10 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Technologie — SCM Signpost</title>
-<meta name="description" content="Technologie — připravujeme.">
+<title>Implementace WMS a TMS bez zbytečného custom vývoje | SCM Signpost</title>
+<meta name="description" content="Nezávislé posouzení výběru a implementace WMS/TMS: architektura ERP–WMS, kvalita master dat, oponentura custom vývoje a bezpečný go-live.">
 <meta name="theme-color" content="#262626">
-<meta name="robots" content="noindex">
 <link rel="canonical" href="https://flean1cz.github.io/SCM-signpost/pilir-technologie.html">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
@@ -14,15 +13,15 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:site_name" content="SCM Signpost">
-<meta property="og:title" content="Technologie — SCM Signpost">
-<meta property="og:description" content="Technologie — připravujeme.">
+<meta property="og:title" content="Implementace WMS a TMS bez zbytečného custom vývoje | SCM Signpost">
+<meta property="og:description" content="Nezávislé posouzení výběru a implementace WMS/TMS: architektura ERP–WMS, kvalita master dat, oponentura custom vývoje a bezpečný go-live.">
 <meta property="og:url" content="https://flean1cz.github.io/SCM-signpost/pilir-technologie.html">
 <meta property="og:image" content="https://flean1cz.github.io/SCM-signpost/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Technologie — SCM Signpost">
-<meta name="twitter:description" content="Technologie — připravujeme.">
+<meta name="twitter:title" content="Implementace WMS a TMS bez zbytečného custom vývoje | SCM Signpost">
+<meta name="twitter:description" content="Nezávislé posouzení výběru a implementace WMS/TMS: architektura ERP–WMS, kvalita master dat, oponentura custom vývoje a bezpečný go-live.">
 <meta name="twitter:image" content="https://flean1cz.github.io/SCM-signpost/assets/og-image.jpg">
 <link rel="preload" href="assets/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/RobotoMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
@@ -49,11 +48,104 @@
 </nav>
 <main style="padding: 80px var(--pad);">
 <!-- OBSAH -->
-<div class="section-header">
-  <div class="section-tag">// Expertíza</div>
-  <h1 class="section-h2">04 — Technologie</h1>
+<div class="pillar-article">
+  <div class="section-header">
+    <div class="section-tag">// Expertíza</div>
+    <h1 class="section-h2">Technologie: proč drahý kód nenahradí procesní disciplínu</h1>
+  </div>
+
+  <p class="pos-body">Nejdražší chyba u logistických technologií nevznikne při výběru dodavatele. Vzniká ve chvíli, kdy firma nechá systém ohýbat kolem neefektivních procesů místo toho, aby ohnula procesy podle osvědčeného standardu.</p>
+
+  <h2 class="pillar-h2">Kde firmy ztrácejí peníze při implementaci WMS/TMS</h2>
+
+  <h3 class="pillar-h3">1. Výběr systému podle prodejního dema, ne podle reálné operativy</h3>
+  <p class="pos-body">Firma podlehne nablýskané prezentaci obchodníků dodavatele softwaru a koupí systém, který skvěle vypadá na předváděcí akci.</p>
+  <p class="pos-body">V praxi ale vyžaduje nesmyslně složité klikání řidičů a skladníků na terminálech a neodpovídá reálné rychlosti provozu.</p>
+
+  <h3 class="pillar-h3">2. Předimenzovaný vývoj na míru</h3>
+  <p class="pos-body">Místo aby firma zjednodušila a standardizovala procesy podle osvědčených šablon (například v SAP EWM či TRIS), nutí integrátora systém ohýbat a psát stovky zbytečných úprav na míru.</p>
+  <p class="pos-body">Výsledkem je extrémně drahý kód, zpoždění projektu a budoucí závislost na jednom dodavateli (vendor lock-in).</p>
+
+  <h3 class="pillar-h3">3. Špatná architektura rozhraní ERP–WMS a podcenění master dat</h3>
+  <p class="pos-body">Chybějící datová synchronizace v reálném čase, podcenění přípravy kmenových dat (rozměry, váhy, balicí předpisy) a spoléhání na to, že si systémy „nějak porozumí".</p>
+  <p class="pos-body">Výsledkem je neustálé padání datových zpráv, chyby v rozhraní a chybějící reporting pro vedení.</p>
+
+  <h2 class="pillar-h2">Jak přesně na tomto firma prodělává</h2>
+
+  <h3 class="pillar-h3">Předražený custom development</h3>
+  <p class="pos-body">Integrátoři účtují statisíce až miliony za člověkodny potřebné na úpravy na míru pro neefektivní postupy, které měly být odstraněny už před implementací.</p>
+
+  <h3 class="pillar-h3">Dvojí evidence dat a ruční záchranářské práce</h3>
+  <p class="pos-body">Když propojení ERP a WMS selhává, zaměstnanci tráví hodiny denně ručním dohledáváním, stornováním a přepisováním zaseknutých objednávek mezi systémy. Firma platí za zbytečnou administrativní přezaměstnanost.</p>
+
+  <h3 class="pillar-h3">Kapacitní a finanční kolaps při ostrém spuštění</h3>
+  <p class="pos-body">Pokud se podcení testování a příprava procesů, při ostrém startu (go-live) dochází k zablokování expedice, zastavení odbavování kamionů a smluvním penalizacím ze strany odběratelů.</p>
+
+  <h3 class="pillar-h3">Vyhozené peníze za nevyužité licence</h3>
+  <p class="pos-body">Firma ročně platí drahé licenční poplatky za pokročilé moduly, z nichž v praxi využívá pouhých 20 % základních funkcí.</p>
+
+  <h2 class="pillar-h2">Příklad z praxe</h2>
+  <p class="pos-body">Středně velká distribuční firma čelila krizovému stavu při implementaci SAP EWM.</p>
+  <p class="pos-body">Integrátor fakturoval milionové vícenáklady za dodatečný vývoj procesních výjimek na míru, projekt měl 7 měsíců zpoždění a rozhraní s ERP neustále generovalo datové chyby při převodu expedičních příkazů.</p>
+  <p class="pos-body">Provedli jsme nezávislou oponenturu architektonického návrhu, zastavili zbytečný custom vývoj, vrátili implementaci k procesnímu standardu SAP EWM, narovnali logiku materiálových toků na skladové ploše a přenastavili datovou komunikaci mezi ERP a WMS.</p>
+  <p class="pos-body">Dosažené výsledky:</p>
+  <div class="pillar-stats">
+    <div class="pillar-stat">
+      <div class="stat-val">4 měsíce</div>
+      <div class="stat-desc">zkrácení zpoždění projektu a ušetření implementačního času</div>
+    </div>
+    <div class="pillar-stat">
+      <div class="stat-val">3,8 mil. Kč</div>
+      <div class="stat-desc">ušetření na zbytečných úpravách softwaru na míru a licencích</div>
+    </div>
+    <div class="pillar-stat">
+      <div class="stat-val">&lt;0,03 %</div>
+      <div class="stat-desc">snížení chybovosti datových zpráv v rozhraní ERP–WMS</div>
+    </div>
+    <div class="pillar-stat">
+      <div class="stat-val">0 dní</div>
+      <div class="stat-desc">hladký ostrý start bez jediného dne výpadku zákaznických dodávek</div>
+    </div>
+  </div>
+  <p class="pos-body">Nešlo o výměnu systému. Šlo o to, aby systém dělal to, co má, za cenu, která odpovídá skutečné hodnotě.</p>
+
+  <h2 class="pillar-h2">Náš postoj k logistickým technologiím</h2>
+  <blockquote class="pillar-quote">
+    <p>„Konzultanti, kteří vám prodávají vlastní software, vám vždycky řeknou, že váš problém vyřeší jejich nová verze.</p>
+    <p>Já neprodávám licence ani vývojářské člověkodny. Rozumím architekturám jako SAP EWM, TRIS i specializovaným WMS/TMS řešením, ale mým úkolem je hlídat vaše zájmy — abyste nekupovali drahý kód jako náplast na neefektivní procesy na skladové ploše."</p>
+  </blockquote>
+
+  <h2 class="pillar-h2">Pro koho je služba určena</h2>
+  <p class="pos-body">Pomáhám zejména:</p>
+  <ul class="pillar-list">
+    <li>ředitelům logistiky a provozním ředitelům (COO)</li>
+    <li>ředitelům IT (CIO)</li>
+    <li>finančním ředitelům (CFO) firem, které plánují, implementují nebo zachraňují digitalizaci logistiky</li>
+  </ul>
+  <p class="pos-body">Typicky mě klient kontaktuje ve chvíli, kdy:</p>
+  <ul class="pillar-list">
+    <li>připravuje nezávislý výběr nového WMS/TMS a potřebuje neprůstřelné zadávací řízení bez rizika, že mu dodavatel vnutí předražený systém</li>
+    <li>plánuje migraci na nové systémy (SAP EWM, S/4HANA, TRIS) a potřebuje ohlídat architektonický návrh a zabránit nekontrolovatelnému růstu custom vývoje</li>
+    <li>má zablokovanou implementaci — dodavatel posouvá termíny, navyšuje rozpočet za „nepředvídané úpravy" a provozní tým varuje, že systém v praxi nepůjde používat</li>
+    <li>řeší nefunkční rozhraní a chybějící BI reporting — ERP nekomunikuje se skladovým systémem v reálném čase a vedení nemá přehled o jednotkových nákladech a výkonu skladu</li>
+  </ul>
+
+  <h2 class="pillar-h2">Nechte si prověřit projekt dřív, než se drahý kód stane trvalým řešením</h2>
+  <p class="pos-body">Na úvodním diagnostickém hovoru společně projdeme:</p>
+  <ul class="pillar-list">
+    <li>aktuální stav implementace nebo výběrového řízení</li>
+    <li>rozsah plánovaného nebo probíhajícího custom vývoje</li>
+    <li>architekturu rozhraní mezi ERP a WMS</li>
+    <li>rizika, která mohou ohrozit termín nebo rozpočet projektu</li>
+  </ul>
+
+  <div class="pillar-cta">
+    <a class="btn-primary" href="index.html#contact">Domluvit diagnostický hovor</a>
+  </div>
+
+  <p class="pos-body">Neprodávám vám software.</p>
+  <p class="pos-body">Pomáhám vám ověřit, že za technologii, kterou platíte, dostáváte odpovídající hodnotu — a že řešíte skutečnou příčinu, ne jen její symptom.</p>
 </div>
-<p class="pos-body">Připravujeme.</p>
 </main>
 <footer>
   <p class="footer-note">© 2026 SCM Signpost. Navigating the Supply Chain Reality.</p>
