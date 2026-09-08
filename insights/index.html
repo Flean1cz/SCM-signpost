@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insights — SCM Signpost</title>
+<meta name="description" content="Provozní poznámky k 3PL tendrům, skladové efektivitě, dopravě a implementacím WMS. Metodika a kontrolní otázky, ne marketingové shrnutí.">
+<meta name="theme-color" content="#262626">
+<link rel="canonical" href="https://www.scmsignpost.com/insights/">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="SCM Signpost">
+<meta property="og:title" content="Insights — SCM Signpost">
+<meta property="og:description" content="Provozní poznámky k 3PL tendrům, skladové efektivitě, dopravě a implementacím WMS. Metodika a kontrolní otázky, ne marketingové shrnutí.">
+<meta property="og:url" content="https://www.scmsignpost.com/insights/">
+<meta property="og:image" content="https://www.scmsignpost.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insights — SCM Signpost">
+<meta name="twitter:description" content="Provozní poznámky k 3PL tendrům, skladové efektivitě, dopravě a implementacím WMS.">
+<meta name="twitter:image" content="https://www.scmsignpost.com/assets/og-image.jpg">
+
+<link rel="preload" href="../assets/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/RobotoMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/insights.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">SCM <span>Signpost</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html#pillars">Pilíře</a>
+      <a href="index.html" aria-current="page">Insights</a>
+      <a href="../index.html#positioning">O mně</a>
+      <a href="../index.html#contact">Kontakt</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Otevřít menu">MENU</button>
+    <a href="../index.html#contact" class="nav-cta">Audit →</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="page-head">
+    <div class="section-tag">// Insights</div>
+    <h1>Poznámky z provozu, ne z prezentací</h1>
+    <p class="lead">Píšu o věcech, které rozhodují dřív, než se cokoli objeví v reportu: jak je postavené zadání tendru, co se dá z dat skutečně změřit a kde se skrývá rozdíl mezi nabídkou a fakturou. Každý text obsahuje metodiku nebo kontrolní seznam, který jde použít bez mojí přítomnosti.</p>
+  </header>
+
+  <div class="post-list">
+    <article class="post-card">
+      <div class="meta"><span>3PL tendry</span><span class="sep">/</span><span>8. září 2026</span><span class="sep">/</span><span>7 min čtení</span></div>
+      <h2><a href="3pl-tender-devet-mist.html">Devět míst, kde se 3PL tendr rozpadne ještě před podáním nabídek</a></h2>
+      <p>Nabídky nejdou porovnat obvykle ne proto, že by poskytovatelé počítali nepoctivě — ale proto, že jim zadání dovolí odpovědět devíti různými způsoby. Devět mezer, které vzniknou vždycky, a kontrolní otázky před vypsáním tendru.</p>
+    </article>
+  </div>
+
+  <p class="rhythm-note">Nová poznámka vychází zhruba jednou za čtrnáct dní. Kratší verze publikuji na <a href="https://www.linkedin.com/company/sc-signpost" target="_blank" rel="noopener">LinkedInu</a>, plné znění vždy tady.</p>
+</div>
+
+<footer>
+  <p class="footer-note">© 2026 SCM Signpost. Navigating the Industrial Reality.</p>
+</footer>
+
+<script>
+var navToggle = document.getElementById('navToggle');
+var navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', function () {
+  var open = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+navLinks.addEventListener('click', function (e) {
+  if (e.target.tagName === 'A') {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+</body>
+</html>
