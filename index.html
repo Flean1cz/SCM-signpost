@@ -3,83 +3,288 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Logistické poradenství a audit logistiky | SCM Signpost</title>
-<meta name="description" content="Logistické poradenství Jakuba Blažka: audit 3PL tendrů, optimalizace skladu a dopravy, WMS/TMS a stabilizace provozu. Domluvte si úvodní konzultaci.">
+<title>SCM Signpost — Průvodci industriální realitou</title>
+<meta name="description" content="Odborný filtr mezi nákupem a skladem. Audit 3PL tendrů, skladová efektivita, transport a implementace WMS/TMS — funkční řešení založená na datech.">
 <meta name="theme-color" content="#262626">
-<link rel="canonical" href="https://www.scmsignpost.com/">
+<link rel="canonical" href="https://flean1cz.github.io/SCM-signpost/">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:site_name" content="SCM Signpost">
-<meta property="og:title" content="Logistické poradenství a audit logistiky | SCM Signpost">
-<meta property="og:description" content="Logistické poradenství Jakuba Blažka: audit 3PL tendrů, optimalizace skladu a dopravy, WMS/TMS a stabilizace provozu. Domluvte si úvodní konzultaci.">
-<meta property="og:url" content="https://www.scmsignpost.com/">
-<meta property="og:image" content="https://www.scmsignpost.com/assets/og-image.jpg">
+<meta property="og:title" content="SCM Signpost — Logistické sliby v praxi">
+<meta property="og:description" content="Odborný filtr mezi nákupem a skladem. Audit 3PL tendrů, skladová efektivita, transport a implementace WMS/TMS — funkční řešení založená na datech.">
+<meta property="og:url" content="https://flean1cz.github.io/SCM-signpost/">
+<meta property="og:image" content="https://flean1cz.github.io/SCM-signpost/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Logistické poradenství a audit logistiky | SCM Signpost">
-<meta name="twitter:description" content="Logistické poradenství Jakuba Blažka: audit 3PL tendrů, optimalizace skladu a dopravy, WMS/TMS a stabilizace provozu. Domluvte si úvodní konzultaci.">
-<meta name="twitter:image" content="https://www.scmsignpost.com/assets/og-image.jpg">
+<meta name="twitter:title" content="SCM Signpost — Logistické sliby v praxi">
+<meta name="twitter:description" content="Odborný filtr mezi nákupem a skladem. Audit 3PL tendrů, skladová efektivita, transport a implementace WMS/TMS — funkční řešení založená na datech.">
+<meta name="twitter:image" content="https://flean1cz.github.io/SCM-signpost/assets/og-image.jpg">
 <link rel="preload" href="assets/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/RobotoMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/styles.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.scmsignpost.com/#organization",
-      "name": "SCM Signpost",
-      "url": "https://www.scmsignpost.com/",
-      "email": "info@scmsignpost.com",
-      "founder": {
-        "@id": "https://www.scmsignpost.com/#jakub-blazek"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.scmsignpost.com/#website",
-      "url": "https://www.scmsignpost.com/",
-      "name": "SCM Signpost",
-      "inLanguage": "cs",
-      "publisher": {
-        "@id": "https://www.scmsignpost.com/#organization"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.scmsignpost.com/#webpage",
-      "url": "https://www.scmsignpost.com/",
-      "name": "Logistické poradenství a audit logistiky | SCM Signpost",
-      "description": "Logistické poradenství Jakuba Blažka: audit 3PL tendrů, optimalizace skladu a dopravy, WMS/TMS a stabilizace provozu. Domluvte si úvodní konzultaci.",
-      "inLanguage": "cs",
-      "isPartOf": {
-        "@id": "https://www.scmsignpost.com/#website"
-      }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://www.scmsignpost.com/#jakub-blazek",
-      "name": "Jakub Blažek",
-      "url": "https://www.scmsignpost.com/#positioning",
-      "jobTitle": "Logistický konzultant"
-    }
-  ]
+<style>
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/Inter-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
 }
-</script>
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('assets/RobotoMono-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+/* Roboto Mono contains no arrow glyphs — serve U+2190-2193 from Inter for consistent rendering */
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('assets/Inter-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+  unicode-range: U+2190-2193;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #262626;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+:root {
+  --asphalt:       #262626;
+  --asphalt-light: #2E2E2E;
+  --steel:         #3A3D41;
+  --grid:          #2C2F33;
+  --yellow:        #FFD700;
+  --white:         #FFFFFF;
+  --muted:         #9298A0;
+  --max-w:         1140px;
+  --pad:           clamp(24px, 5vw, 80px);
+}
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--asphalt);
+  border-bottom: 1px solid var(--grid);
+  padding: 0 var(--pad);
+}
+.nav-inner {
+  max-width: var(--max-w); margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px; gap: 24px;
+}
+.nav-logo {
+  font-family: 'Roboto Mono', monospace; font-weight: 600; font-size: 15px;
+  letter-spacing: 0.04em; color: var(--white); text-decoration: none;
+  text-transform: uppercase; white-space: nowrap;
+}
+.nav-logo span { color: var(--yellow); }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a {
+  font-family: 'Roboto Mono', monospace; font-size: 11px; font-weight: 500;
+  color: var(--muted); text-decoration: none; letter-spacing: 0.1em;
+  text-transform: uppercase; transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  font-family: 'Roboto Mono', monospace; font-weight: 600; font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 18px;
+  background: var(--yellow); color: var(--asphalt); text-decoration: none;
+  white-space: nowrap; transition: opacity 0.15s;
+}
+#hero {
+  position: relative; overflow: hidden;
+  min-height: 92vh;
+  display: flex; align-items: center;
+  padding: 80px var(--pad);
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.7;
+}
+.hero-inner {
+  position: relative; z-index: 1;
+  max-width: var(--max-w); margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+.hero-label {
+  font-family: 'Roboto Mono', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow);
+  margin-bottom: 24px;
+}
+.hero-h1 {
+  font-family: 'Inter', sans-serif; font-weight: 900;
+  font-size: clamp(36px, 5.5vw, 72px);
+  line-height: 1.0; letter-spacing: -0.03em; color: var(--white);
+  margin-bottom: 28px;
+}
+.accent { color: var(--yellow); }
+.hero-sub {
+  font-family: 'Inter', sans-serif; font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 400; color: var(--muted); line-height: 1.6; max-width: 480px;
+  margin-bottom: 40px;
+}
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 12px;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 28px;
+  background: var(--yellow); color: var(--asphalt); text-decoration: none;
+  transition: opacity 0.15s; cursor: pointer; border: none; display: inline-block;
+}
+.btn-outline {
+  font-family: 'Roboto Mono', monospace; font-weight: 600; font-size: 12px;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 28px;
+  background: transparent; color: var(--white); border: 1px solid var(--steel);
+  text-decoration: none; transition: border-color 0.15s; display: inline-block;
+}
+.hero-visual {
+  position: relative; border: 1px solid var(--steel); padding: 32px;
+  background: rgba(44,47,51,0.5);
+}
+.visual-label { font-family: 'Roboto Mono', monospace; font-size: 9px; color: var(--yellow); margin-bottom: 20px; text-transform: uppercase; }
+.visual-stat { margin-bottom: 20px; border-bottom: 1px solid var(--grid); padding-bottom: 16px; }
+.stat-val { font-family: 'Roboto Mono', monospace; font-weight: 600; font-size: 32px; color: var(--yellow); }
+.stat-desc { font-size: 13px; color: var(--muted); }
+.section-header { border-left: 3px solid var(--yellow); padding-left: 20px; margin-bottom: 64px; }
+.section-tag { font-family: 'Roboto Mono', monospace; font-size: 10px; color: var(--yellow); text-transform: uppercase; margin-bottom: 10px; }
+.section-h2 { font-weight: 800; font-size: clamp(28px, 3.5vw, 48px); color: var(--white); }
+#positioning { padding: 80px var(--pad); background: var(--asphalt-light); }
+.positioning-grid { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.pos-body { font-size: 18px; color: var(--muted); }
+.pos-values { display: flex; flex-direction: column; gap: 20px; }
+.pos-value-title { font-family: 'Roboto Mono', monospace; color: var(--yellow); font-size: 13px; text-transform: uppercase; }
+#pillars { padding: 80px var(--pad); }
+.pillars-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.pillar-card { background: var(--asphalt-light); padding: 32px; border: 1px solid var(--grid); }
+.pillar-title { font-family: 'Roboto Mono', monospace; margin-bottom: 15px; color: var(--white); }
+.pillar-list { list-style: none; font-size: 14px; color: var(--muted); }
+.pillar-list li { margin-bottom: 8px; padding-left: 15px; position: relative; }
+.pillar-list li::before { content: '→'; position: absolute; left: 0; color: var(--yellow); }
+#contact { padding: 80px var(--pad); }
+.contact-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.form { display: flex; flex-direction: column; gap: 15px; }
+.form-input, .form-textarea { background: var(--grid); border: 1px solid var(--steel); color: white; padding: 12px; outline: none; width: 100%; }
+.form-submit { background: var(--yellow); color: var(--asphalt); border: none; padding: 15px; font-weight: 700; cursor: pointer; text-transform: uppercase; }
+.form-success { border: 1px solid var(--yellow); background: rgba(255,215,0,0.10); color: var(--yellow); padding: 12px 16px; font-family: 'Roboto Mono', monospace; font-size: 13px; }
+#pillars .section-header, #pillars .pillars-grid { max-width: var(--max-w); margin-left: auto; margin-right: auto; }
+#pillars .section-header { margin-bottom: 64px; padding-right: 20px; }
+.pos-note { font-size: 14px; color: var(--muted); }
+.contact-h2 { font-size: clamp(34px, 4.5vw, 48px); font-weight: 900; line-height: 1; }
+.contact-sub { color: var(--muted); margin: 20px 0; }
+.contact-email { font-family: 'Roboto Mono', monospace; font-size: 14px; color: var(--yellow); }
+.footer-note { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--muted); }
+.nav-cta:hover, .btn-primary:hover, .form-submit:hover { opacity: 0.85; }
+.btn-outline:hover { border-color: var(--yellow); }
+.form-input:focus, .form-textarea:focus { border-color: var(--yellow); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+.form-submit { transition: opacity 0.15s; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+footer { background: #1E1E1E; padding: 40px var(--pad); border-top: 1px solid var(--grid); text-align: center; }
+.nav-toggle {
+  display: none; background: transparent; border: 1px solid var(--steel);
+  color: var(--white); font-family: 'Roboto Mono', monospace; font-size: 11px;
+  font-weight: 600; letter-spacing: 0.1em; padding: 7px 12px; cursor: pointer;
+}
+
+/* ---------- LinkedIn carousel ---------- */
+#linkedin { padding: 80px var(--pad); background: var(--asphalt-light); }
+#linkedin .li-inner { max-width: var(--max-w); margin: 0 auto; }
+.li-head {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap; margin-bottom: 40px;
+}
+.li-head .section-header { margin-bottom: 0; }
+.li-follow {
+  font-family: 'Roboto Mono', monospace; font-weight: 600; font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 18px;
+  border: 1px solid var(--steel); color: var(--white); text-decoration: none;
+  white-space: nowrap; transition: border-color 0.15s;
+}
+.li-follow:hover { border-color: var(--yellow); }
+.li-track {
+  display: flex; gap: 20px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  scrollbar-width: none; -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+.li-track::-webkit-scrollbar { display: none; }
+.li-track:focus-visible { outline: 2px solid var(--yellow); outline-offset: 4px; }
+.li-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  scroll-snap-align: start;
+  background: var(--asphalt); border: 1px solid var(--grid);
+  padding: 28px; display: flex; flex-direction: column;
+}
+.li-date {
+  font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--muted);
+  letter-spacing: 0.08em; margin-bottom: 14px;
+}
+.li-title { font-size: 17px; font-weight: 700; line-height: 1.35; margin-bottom: 10px; }
+.li-text { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+.li-actions { margin-top: auto; display: flex; gap: 20px; flex-wrap: wrap; }
+.li-actions a {
+  font-family: 'Roboto Mono', monospace; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+  color: var(--yellow); border-bottom: 1px solid transparent; padding-bottom: 2px;
+}
+.li-actions a.secondary { color: var(--white); }
+.li-actions a:hover { border-bottom-color: currentColor; }
+.li-controls {
+  display: flex; align-items: center; gap: 14px;
+  margin-top: 28px; justify-content: flex-end;
+}
+.li-counter {
+  font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--muted);
+  letter-spacing: 0.12em; min-width: 62px; text-align: right;
+}
+.li-arrow {
+  width: 42px; height: 42px; background: transparent;
+  border: 1px solid var(--steel); color: var(--white);
+  font-family: 'Roboto Mono', monospace; font-size: 15px; line-height: 1;
+  cursor: pointer; transition: border-color 0.15s, color 0.15s;
+}
+.li-arrow:hover:not(:disabled) { border-color: var(--yellow); color: var(--yellow); }
+.li-arrow:disabled { color: var(--steel); cursor: default; }
+@media (max-width: 1000px) {
+  .li-card { flex-basis: calc((100% - 20px) / 2); }
+}
+@media (max-width: 700px) {
+  .li-card { flex-basis: 86%; }
+  .li-controls { justify-content: space-between; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .li-track { scroll-behavior: auto; }
+}
+
+@media (max-width: 800px) {
+  .hero-inner, .positioning-grid, .contact-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none; position: absolute; top: 56px; left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--asphalt);
+    border-bottom: 1px solid var(--grid); padding: 4px var(--pad) 12px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--grid); font-size: 13px; }
+  .nav-links a:last-child { border-bottom: none; }
+}
+</style>
 </head>
 <body>
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo">SCM <span>Signpost</span></a>
     <div class="nav-links" id="navLinks">
-      <a href="#pillars">Služby</a>
+      <a href="#pillars">Pilíře</a>
+      <a href="#linkedin">Poznámky</a>
       <a href="#positioning">O mně</a>
-      <a href="#linkedin">LinkedIn</a>
       <a href="#contact">Kontakt</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Otevřít menu">MENU</button>
@@ -91,22 +296,22 @@
   <div class="hero-inner">
     <div>
       <div class="hero-label">// Supply Chain Intelligence</div>
-      <h1 class="hero-h1">Logistické poradenství <span class="accent">založené na praxi.</span></h1>
-      <p class="hero-sub">Pomáhám firmám odhalit zbytečné náklady, vybrat logistického partnera a zlepšit sklad, dopravu i WMS/TMS. Jsem Jakub Blažek — propojuji data s reálným provozem.</p>
+      <h1 class="hero-h1">Logistické sliby v <span class="accent">praxi.</span></h1>
+      <p class="hero-sub">Jsem odborný filtr mezi nákupem a skladem. Žádná vata, jen funkční řešení založená na datech.</p>
       <div class="btn-row">
-        <a href="#pillars" class="btn-primary">Prohlédnout služby</a>
-        <a href="#contact" class="btn-outline">Domluvit konzultaci</a>
+        <a href="#pillars" class="btn-primary">Expertíza</a>
+        <a href="#contact" class="btn-outline">Zadat audit</a>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="visual-label">// Co prověřím</div>
+      <div class="visual-label">// Analýza rizik</div>
       <div class="visual-stat">
-        <div class="stat-val">Náklady</div>
-        <div class="stat-desc">Celkový model skladování a dopravy</div>
+        <div class="stat-val">+18%</div>
+        <div class="stat-desc">Skryté náklady v dopravě</div>
       </div>
       <div class="visual-stat">
-        <div class="stat-val">Provoz</div>
-        <div class="stat-desc">Kapacita, procesy a systémové vazby</div>
+        <div class="stat-val">94.1%</div>
+        <div class="stat-desc">Reálná efektivita SLA</div>
       </div>
     </div>
   </div>
@@ -116,11 +321,9 @@
     <div>
       <div class="section-header">
         <div class="section-tag">// Kdo jsem</div>
-        <h2 class="section-h2">Jakub Blažek</h2>
+        <h2 class="section-h2">Průvodci industriální realitou.</h2>
       </div>
-      <p class="pos-body">Třináct let v logistice a supply chainu. Obalový expert, advanced logistics, global freight manager v automotive, logistický projektový manažer, obchodní zástupce na straně 3PL a 4PL poskytovatelů.</p>
-      <p class="pos-body">Tenhle rozptyl je záměr, ne náhoda. Seděl jsem na obou stranách stolu — psal nabídky i je vyhodnocoval. Vím, kde se v pricingovém modelu schovává riziko, protože jsem takové modely sám stavěl.</p>
-      <p class="pos-body">Od roku 2025 pracuji pod značkou SCM Signpost. Sám a záměrně: na váš provoz se dívám osobně, od rampy po reporting. Tendry a jednání vedu česky i anglicky. Eliminuji propast mezi tím, co slibuje obchod, a tím, co lze reálně odoperovat. Rozumím kódům na paletách i tabulkám pro board.</p>
+      <p class="pos-body">Eliminuji propast mezi tím, co slibuje obchod, a tím, co lze reálně odoperovat. Rozumím kódům na paletách i tabulkám pro board.</p>
     </div>
     <div class="pos-values">
       <div class="pos-value">
@@ -129,92 +332,76 @@
       </div>
       <div class="pos-value">
         <div class="pos-value-title">Přímost</div>
-        <p class="pos-note">Pokud je zadání tendru špatné, rovnou to řeknu. I když to není to, co chcete slyšet.</p>
+        <p class="pos-note">Pokud je zadání tendru špatné, rovnou to řeknu.</p>
       </div>
-      <div class="pos-value">
-        <div class="pos-value-title">Obě strany stolu</div>
-        <p class="pos-note">Znám argumentaci 3PL zevnitř. Poznám, kdy je reálná a kdy jen dobře napsaná.</p>
-      </div>
-      <dl class="creds">
-        <dt>Vzdělání</dt>
-        <dd>Dopravní fakulta Jana Pernera, Univerzita Pardubice</dd>
-        <dt>Certifikace</dt>
-        <dd>PRINCE2 Agile — projektové řízení</dd>
-        <dt>Systémy</dt>
-        <dd>SAP · SAP EWM · Mibcon · TRIS</dd>
-        <dt>Jazyky</dt>
-        <dd>Čeština · Angličtina</dd>
-      </dl>
     </div>
   </div>
 </section>
 <section id="pillars">
   <div class="section-header">
     <div class="section-tag">// Expertíza</div>
-    <h2 class="section-h2">Logistické poradenství: služby pro váš provoz</h2>
+    <h2 class="section-h2">Pět pilířů efektivity</h2>
   </div>
   <div class="pillars-grid">
-    <a class="pillar-card" href="pilir-3pl-tendry.html">
-      <div class="pillar-title">01 — 3PL tendry a audit nabídek</div>
+    <div class="pillar-card">
+      <div class="pillar-title">01 — 3PL Tendry</div>
       <ul class="pillar-list">
         <li>Kvalitní warehouse nabídky</li>
         <li>Audit pricingových modelů</li>
         <li>Identifikace rizik v RFQ</li>
       </ul>
-    </a>
-    <a class="pillar-card" href="pilir-skladova-efektivita.html">
-      <div class="pillar-title">02 — Audit a optimalizace skladu</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-title">02 — Skladová efektivita</div>
       <ul class="pillar-list">
         <li>Analýza toku materiálu</li>
         <li>Nastavení smysluplných KPI</li>
         <li>Kritický pohled na automatizaci</li>
       </ul>
-    </a>
-    <a class="pillar-card" href="pilir-transport.html">
-      <div class="pillar-title">03 — Audit a optimalizace dopravy</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-title">03 — Transport</div>
       <ul class="pillar-list">
         <li>Optimalizace tras</li>
         <li>Audit palivových příplatků</li>
         <li>Vratná logistika</li>
       </ul>
-    </a>
-    <a class="pillar-card" href="pilir-technologie.html">
-      <div class="pillar-title">04 — Výběr a implementace WMS/TMS</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-title">04 — Technologie</div>
       <ul class="pillar-list">
         <li>Implementace WMS / TMS</li>
         <li>Propojení ERP se skladem</li>
         <li>Reporting pro byznys</li>
       </ul>
-    </a>
-    <a class="pillar-card" href="pilir-krizovy-management.html">
-      <div class="pillar-title">05 — Krizový management logistiky</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-title">05 — Krizový management</div>
       <ul class="pillar-list">
         <li>Stabilizace provozu</li>
         <li>Interim management</li>
         <li>Audit dodavatelských rizik</li>
       </ul>
-    </a>
+    </div>
   </div>
 </section>
-<section id="linkedin">
-  <div class="linkedin-inner">
-    <div class="section-header">
-      <div class="section-tag">// LinkedIn</div>
-      <h2 class="section-h2">Poslední příspěvek</h2>
+<section id="linkedin" data-src="assets/linkedin-latest.json" data-limit="5" hidden>
+  <div class="li-inner">
+    <div class="li-head">
+      <div class="section-header">
+        <div class="section-tag">// Poznámky</div>
+        <h2 class="section-h2">Naposledy na LinkedInu</h2>
+      </div>
+      <a class="li-follow" data-li-profile href="https://www.linkedin.com/company/sc-signpost" target="_blank" rel="noopener">Sledovat →</a>
     </div>
-    <div class="linkedin-grid">
-      <div>
-        <div class="linkedin-frame-wrap" id="liFrameWrap" hidden></div>
-        <div class="linkedin-fallback" id="liFallback" hidden>
-          <p>Aktuální příspěvky a poznámky z praxe najdete na firemním profilu SCM Signpost.</p>
-          <a class="btn-primary" href="https://www.linkedin.com/company/sc-signpost" target="_blank" rel="noopener">Otevřít LinkedIn →</a>
-        </div>
-      </div>
-      <div class="linkedin-side">
-        <div class="pos-value-title">Poznámky z terénu</div>
-        <p class="linkedin-note">Tendry, sklady, implementace — co reálně funguje a co ne. Bez marketingové vaty.</p>
-        <a class="btn-outline" href="https://www.linkedin.com/company/sc-signpost" target="_blank" rel="noopener">Sledovat SCM Signpost</a>
-      </div>
+
+    <div class="li-track" data-li-track tabindex="0" role="region"
+         aria-roledescription="carousel" aria-label="Poslední příspěvky na LinkedInu"></div>
+
+    <div class="li-controls" data-li-controls hidden>
+      <span class="li-counter" data-li-counter aria-live="polite"></span>
+      <button type="button" class="li-arrow" data-li-prev aria-label="Předchozí příspěvek">←</button>
+      <button type="button" class="li-arrow" data-li-next aria-label="Další příspěvek">→</button>
     </div>
   </div>
 </section>
@@ -223,14 +410,14 @@
     <div>
       <h2 class="contact-h2">Zastavme <span class="accent">ztráty.</span></h2>
       <p class="contact-sub">Máte pochybnosti o nastavení logistiky? Pojďme se podívat na fakta.</p>
-      <p class="contact-email"><a href="mailto:info@scmsignpost.com">info@scmsignpost.com</a></p>
+      <p class="contact-email">info@scmsignpost.com</p>
     </div>
     <form class="form" id="contactForm" action="https://formsubmit.co/info@scmsignpost.com" method="POST">
-      <div id="formSuccess" class="form-success" role="status" hidden>→ Poptávka odeslána. Ozvu se co nejdříve.</div>
+      <div id="formSuccess" class="form-success" hidden>→ Poptávka odeslána. Ozvu se co nejdříve.</div>
       <input type="hidden" name="_subject" value="Nová poptávka — SCM Signpost web">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://www.scmsignpost.com/?sent=1">
+      <input type="hidden" name="_next" value="https://flean1cz.github.io/SCM-signpost/?sent=1">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label class="sr-only" for="f-name">Jméno</label>
       <input type="text" name="name" id="f-name" class="form-input" placeholder="Jméno" required>
@@ -243,40 +430,14 @@
   </div>
 </section>
 <footer>
-  <p><a class="privacy-link" href="cookies.html">Informace o analytických cookies</a></p>
-  <p class="footer-note">© 2026 SCM Signpost. Navigating the Supply Chain Reality.</p>
+  <p class="footer-note">© 2026 SCM Signpost. Navigating the Industrial Reality.</p>
 </footer>
 <script>
-/* === LinkedIn — poslední příspěvek =========================================
-   Jak aktualizovat po publikaci nového příspěvku (cca 30 sekund):
-   1) Na LinkedIn u příspěvku klikněte na ⋯ (tři tečky) → „Vložit tento
-      příspěvek" / "Embed this post". Funguje jen u veřejných příspěvků.
-   2) Z nabídnutého kódu zkopírujte pouze adresu z atributu src — vypadá takto:
-      https://www.linkedin.com/embed/feed/update/urn:li:share:1234567890
-      (může být i urn:li:ugcPost:… nebo urn:li:activity:…)
-   3) Vložte ji níže mezi uvozovky, commit + push na main. GitHub Action
-      nasadí web a sekce zobrazí nový příspěvek.
-   Prázdný řetězec ("") = místo příspěvku se zobrazí odkaz na firemní profil,
-   sekce tedy nikdy není rozbitá. ========================================== */
-var LINKEDIN_EMBED_URL = "";
-
-(function () {
-  var wrap = document.getElementById('liFrameWrap');
-  var fallback = document.getElementById('liFallback');
-  if (LINKEDIN_EMBED_URL) {
-    var f = document.createElement('iframe');
-    f.src = LINKEDIN_EMBED_URL;
-    f.loading = 'lazy';
-    f.title = 'Poslední příspěvek SCM Signpost na LinkedIn';
-    f.setAttribute('allowfullscreen', '');
-    wrap.appendChild(f);
-    wrap.hidden = false;
-  } else {
-    fallback.hidden = false;
-  }
-})();
-
-
+if (new URLSearchParams(location.search).get('sent') === '1') {
+  var ok = document.getElementById('formSuccess');
+  ok.hidden = false;
+  document.getElementById('contact').scrollIntoView();
+}
 var navToggle = document.getElementById('navToggle');
 var navLinks = document.getElementById('navLinks');
 navToggle.addEventListener('click', function () {
@@ -290,9 +451,6 @@ navLinks.addEventListener('click', function (e) {
   }
 });
 </script>
-<script src="assets/analytics.js" defer></script>
-<script src="assets/animations.js" defer></script>
-<script src="assets/contact.js" defer></script>
-<script src="assets/chat-widget.js" defer></script>
+<script src="assets/linkedin-feed.js" defer></script>
 </body>
 </html>
