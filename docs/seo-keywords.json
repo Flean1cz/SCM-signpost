@@ -1,0 +1,88 @@
+{
+  "index.html": {
+    "title": "Logistické poradenství a audit logistiky | SCM Signpost",
+    "description": "Logistické poradenství Jakuba Blažka: audit 3PL tendrů, optimalizace skladu a dopravy, WMS/TMS a stabilizace provozu. Domluvte si úvodní konzultaci.",
+    "h1": "Logistické poradenství <span class=\"accent\">založené na praxi.</span>",
+    "name": "Logistické poradenství a audit logistiky"
+  },
+  "pilir-3pl-tendry.html": {
+    "title": "3PL tendry a audit logistických nabídek | SCM Signpost",
+    "description": "Příprava 3PL tendru, audit RFQ a porovnání celkových nákladů nabídek. Odhalte rizika outsourcingu logistiky před podpisem smlouvy.",
+    "h1": "3PL tendry a audit logistických nabídek",
+    "name": "3PL tendry",
+    "intro": "Pomáhám firmám připravit výběrové řízení na poskytovatele logistických služeb (3PL), porovnat nabídky na společném nákladovém modelu a vyhodnotit rizika před podpisem smlouvy.",
+    "outputs": [
+      "Kontrola rozsahu RFQ a vstupních provozních dat.",
+      "Porovnání celkových nákladů nabídek včetně minim, implementace a víceprací.",
+      "Přehled obchodních a provozních rizik a podklady pro vyjednávání."
+    ],
+    "related": [
+      "pilir-skladova-efektivita.html",
+      "pilir-technologie.html"
+    ]
+  },
+  "pilir-skladova-efektivita.html": {
+    "title": "Audit skladu a optimalizace skladových procesů | SCM Signpost",
+    "description": "Audit skladu, analýza materiálových toků, layoutu a KPI. Zjistěte, kde vznikají ztráty a co zlepšit před investicí do automatizace.",
+    "h1": "Audit skladu a optimalizace skladových procesů",
+    "name": "Audit a optimalizace skladu",
+    "intro": "Pomáhám firmám prověřit výkon skladu, využití kapacity a materiálové toky. Audit propojuje provozní data s layoutem, plánováním práce a náklady, aby bylo jasné, co změnit před další investicí.",
+    "outputs": [
+      "Posouzení materiálových toků, rozmístění zásob a využití kapacity.",
+      "Kontrola provozních KPI, produktivity a míst vzniku chyb.",
+      "Doporučení procesních změn a posouzení připravenosti na automatizaci."
+    ],
+    "related": [
+      "pilir-technologie.html",
+      "pilir-3pl-tendry.html"
+    ]
+  },
+  "pilir-transport.html": {
+    "title": "Audit dopravy a optimalizace přepravních nákladů | SCM Signpost",
+    "description": "Prověřte přepravní náklady, palivové doložky, příplatky a konsolidaci zásilek. Poradenství pro výběr dopravního modelu podle skutečných toků zboží.",
+    "h1": "Audit dopravy a optimalizace přepravních nákladů",
+    "name": "Audit a optimalizace dopravy",
+    "intro": "Pomáhám firmám porozumět celkovým nákladům na dopravu: od základní sazby a palivových doložek po balení, konsolidaci a vratky. Posuzuji přepravní model ve vazbě na skutečný tok zboží.",
+    "outputs": [
+      "Rozbor přepravních nákladů, smluvních příplatků a palivových doložek.",
+      "Posouzení konsolidace, balení, vratek a volby přepravního módu.",
+      "Doporučení změn s ohledem na celkové náklady a požadovaný servis."
+    ],
+    "related": [
+      "pilir-skladova-efektivita.html",
+      "pilir-3pl-tendry.html"
+    ]
+  },
+  "pilir-technologie.html": {
+    "title": "WMS a TMS: výběr a posouzení implementace | SCM Signpost",
+    "description": "Poradenství při výběru a implementaci WMS/TMS. Prověření procesů, zadání, propojení s ERP a rizik vícenákladů před spuštěním systému.",
+    "h1": "Výběr WMS a TMS a posouzení implementace",
+    "name": "Poradenství pro WMS a TMS",
+    "intro": "Pomáhám firmám při výběru a implementaci skladových a dopravních systémů WMS/TMS. Prověřuji zadání, procesní připravenost a propojení s ERP, aby technologie odpovídala potřebám provozu.",
+    "outputs": [
+      "Posouzení zadání a procesní připravenosti pro WMS/TMS.",
+      "Oponentura návrhu integrací, master dat a rozsahu úprav systému.",
+      "Přehled rizik pro rozpočet, termín a spuštění provozu."
+    ],
+    "related": [
+      "pilir-skladova-efektivita.html",
+      "pilir-krizovy-management.html"
+    ]
+  },
+  "pilir-krizovy-management.html": {
+    "title": "Krizový management logistiky a stabilizace | SCM Signpost",
+    "description": "Krizové řízení logistiky při přetížení skladu, výpadcích expedice a problémech WMS/ERP. Priority stabilizace, odpovědnosti a plán nápravy.",
+    "h1": "Krizový management logistiky a stabilizace provozu",
+    "name": "Krizový management logistiky",
+    "intro": "Pomáhám koordinovat stabilizaci logistického provozu, když se současně rozcházejí kapacita, data a odpovědnosti. První prioritou je udržet kritické toky a obnovit řízení skladu, dopravy a systémových vazeb.",
+    "outputs": [
+      "Rozdělení kritických problémů podle dopadu na provoz a zákazníka.",
+      "Určení vlastníků rozhodnutí, priorit a režimu provozního řízení.",
+      "Oddělení dočasných opatření od plánu odstranění příčin."
+    ],
+    "related": [
+      "pilir-technologie.html",
+      "pilir-transport.html"
+    ]
+  }
+}
